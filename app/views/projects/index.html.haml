@@ -1,1 +1,10 @@
-%h1 This is a placeholder ;-)
+%h2 Hey my name is Sam welcome to my portfolio
+%h3  Bushwick keytar VHS four loko. Gastropub you probably haven't heard of them shabby chic, pop-up post-ironic 90's Echo Park. Viral chia hashtag, Shoreditch shabby chic normcore tote bag
+ 
+%h1= link_to @project.name, @project 
+= link_to (image_tag @project.image.url(:thumb)), @project
+%h3= "#{@project.description}"
+
+<!-- check if signed in -->
+- if user_signed_in?
+  = link_to "Add new project", new_project_path
