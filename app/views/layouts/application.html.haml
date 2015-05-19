@@ -1,0 +1,28 @@
+!!!
+%html
+	%head
+		%title Samuel Colon
+		= stylesheet_link_tag    'application', media: 'all', 'dat-		turbolinks-track' => true 
+		= javascript_include_tag 'application', 'data-turbolinkstrack'		 => true 
+		= csrf_meta_tags 
+
+	%body
+		%p.notice= notice
+		%p.alert= alert
+		
+		.header_wrapper
+			.header
+				%p The portfolio of Samuel Colon
+
+			.nav_bar_wrapper	
+				.nav_bar
+					= link_to "Projects", projects_path
+					= "Resume"
+					= "Contact"
+	
+			.control_panel
+				-if user_signed_in?
+					= link_to "Add new project", new_project_path
+	
+		.yield_wrapper		
+			= yield

@@ -2,10 +2,9 @@ class ProjectsController < ApplicationController
 	before_action :find_project, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
 
-
 	def index
 		# only show the latest project on the index page
-		@project = Project.last
+		@projects = Project.all.order("created_at DESC")
 	end
 
 	def show

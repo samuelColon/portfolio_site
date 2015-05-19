@@ -2,9 +2,9 @@
 = image_tag @project.image.url(:large)
 
 %h1= @project.name
+%h3= @project.category
 %p= @project.description
 
-
-<!-- check if user is logged in -->
-= link_to "Edit", edit_project_path(@project)
-= link_to "Destroy",  project_path(@project), method: :delete, data: {confim: "Are you sure?"}
+- if user_signed_in?
+	= link_to "Edit", edit_project_path(@project)
+	= link_to "Destroy",  project_path(@project), method: :delete, data: {confim: "Are you sure?"}

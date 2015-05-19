@@ -2,12 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 	resources :projects
 
-	root 'projects#index'
+	root 'home#index'
 
-	get 'projects/:id' => 'projects#show'
+  get 'projects/' => 'projects#index'
   get 'projects/new' => 'projects#new'
-
-  get 'secret' => 'devise/sessions#new'
-
-
+  get 'projects/:id' => 'projects#show'
 end
