@@ -3,7 +3,6 @@ body {
 	font-weight: 100;
 	background-color: #7DB95C;
 
-
 	.header_wrapper {
 		background-color: #1A4A00;
 	
@@ -28,9 +27,17 @@ body {
 			vertical-align: middle;
 		}
 	}
-
 }
 
+footer {
+	.footer_wrapper {
+		background-color: #000000;
+		.footer {
+			background-color: #ffffff;
+			padding-top: -20px;
+		}
+	}
+}
 
 @import 'home.css.scss';
 @import 'projects.css.scss';

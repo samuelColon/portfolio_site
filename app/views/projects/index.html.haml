@@ -1,17 +1,25 @@
 %h1#header Last in first out
 
-- @projects.each do |p|
-	.project_tile
-		%p= p.name
-		= link_to (image_tag p.image.url(:thumb)), p
-		%p= p.description
-		- if p.category == 'ruby'
-			%img#category{:src => "/assets/ruby_logo.png", :alt => "Smiley face", :height => "32", :width => "32"}
-		- elsif p.category == 'rails'
-			%img#category{:src => "/assets/rails_logo.png", :alt => "Smiley face", :height => "32", :width => "32"}
-		- elsif p.category == 'java'
-			%img#category{:src => "/assets/java_logo.png", :alt => "Smiley face", :height => "32", :width => "32"}
-		- elsif p.category == 'android'
-			%img#category{:src => "/assets/android_logo.png", :alt => "Smiley face", :height => "32", :width => "32"}
-		- else
-			%h1= p.category
+.content
+	%ul
+		- @projects.each do |p|
+			%li
+				.project_tile
+					.project_header
+						%p= p.name
+						= link_to (image_tag p.image.url(:thumb)), p
+						
+						/ category icon will lay over project thumbnail
+						- if p.category == 'ruby'
+							%img#category{:src => "/assets/ruby_logo.png", :alt => "	Smiley 		face	", :height => "32", :width => "32"}
+						- elsif p.category == 'rails'
+							%img#category{:src => "/assets/rails_logo.png", :alt => "		Smiley 		face", :height => "32", :width => "32"}
+						- elsif p.category == 'java'
+							%img#category{:src => "/assets/java_logo.png", :alt => "	Smiley 		face	", :height => "32", :width => "32"}
+						- elsif p.category == 'android'
+							%img#category{:src => "/assets/android_logo.png", :alt => "		Smiley 	face", :height => "32", :width => "32"}
+						- else
+							%h1= p.category
+		
+					.project_description
+						%p= p.description		
