@@ -1,28 +1,23 @@
-
-.bio#wrapper
-	.bio
-		%p  Bushwick keytar VHS four loko. Gastropub you probably haven't heard of them shabby chic, pop-up post-ironic 90's Echo Park. Viral chia hashtag, Shoreditch shabby chic normcore tote bag
-
-/ sometimes you aint ready
-- if @project
-	.featured_project
-		.project
-			%p= link_to "Featured project: #{(@project.name)}", @project
-			= link_to (image_tag @project.image.url(:thumb)), @project
-
-			/ come on sam you can do better than that 
-			- if @project.category== 'ruby'
-				%img{:src => "/assets/ruby_logo.png", :alt => "Smiley face", :height => "26", :width => "26"}
-			- elsif @project.category== 'android'
-				%img{:src => "/assets/android_logo.png", :alt => "Smiley face", :height => "26", :width => "26"}
-			- elsif @project.category== 'ruby'
-				%img{:src => "/assets/ruby_logo.png", :alt => "Smiley face", :height => "26", :width => "26"}
-			- elsif @project.category== 'ruby'
-				%img{:src => "/assets/ruby_logo.png", :alt => "Smiley face", :height => "26", :width => "26"}
-			- else
-				%h1 @project.category
-			%h3= "#{@project.description}"
-- else 
-	%h1 nothing to see here
-
-%br	
+%header
+  .header_wrapper
+    .header_title
+      %p The portfolio of Samuel Colon
+    .header_image
+    .header_bio
+      %p  Bushwick keytar VHS four loko. Gastropub you probably haven't heard of 
+    .nav_wrapper
+      %ul
+        %li 
+          %a{:href => "#"} Projects
+        %li 
+          %a{:href => "#"} Bio
+        %li 
+          %a{:href => "#"}Contact  
+%body
+  .project_wrapper
+    .project
+      .project_header
+        %p#name  Featured Project
+        %p  image
+      .project_description
+        %p  Post-ironic flexitarian Shoreditch, kale chips cliche butcher locavore shabby chic ennui Tumblr messenger bag plaid salvia. Fap 90's health goth hella High Life listicle, Intelligentsia gluten-free farm-to-table aesthetic try-hard. Health goth ethical photo booth taxidermy ennui. Helvetica four loko wayfarers occupy kogi synth, meh drinking vinegar.

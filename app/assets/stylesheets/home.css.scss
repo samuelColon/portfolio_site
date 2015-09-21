@@ -1,24 +1,74 @@
 
-.yield_wrapper {
-	
-	.bio {
-		color: #ffffff;
-		font-family: "verdana";
+  header {
+    height: 30vh;
+    color: #ffffff;
+    background-color: #cccccc;
+    .header_wrapper {
+      text-align: center;
+      padding: 4rem 0;
+      .header_title{
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 2.2rem;
+      }
+      .header_image {
 
+      }
+      .header_bio {
+        font-size: .7rem;
+      }
+      .nav_wrapper {
+        padding-top: .2rem;
+        ul {
+          list-style: none;
+
+          li {
+            display: inline;
+            margin: 0px 10px;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+            }
+            &:hover {
+              a{
+              	color: darken(#ffffff, 40%);
+              }
+            }
+          }
+        }
+      }
+    }
 	}
 
-	.featured_project {
-		background-color: #cccccc;
+  body {
+    .project_wrapper {
+      align:center;
+      .project {
+      	width: 50%;
+      	margin: auto;
+        text-align: center;
+        padding-bottom: 8rem;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+  	    .project_header {	
+  	    	p#name {
+  	    		color: #cccccc;
+  	    		font-weight: 700;
+  	    		font-size: 2rem;
+  	    		margin: 0;
+  	    		padding-top: .5rem;
+  	    	}
+        }
+  	    .project_description {
+  	    	color: #cccccc;
+  	    	font-weight: 300;
+  	    	font-size: 1rem;
+  	    	margin: 0 2.5rem 0 2.5rem;
+  	    	padding: .2rem 0 .2rem 0;
+  	    }
+  	  }
+    }
+  }
 
-		.project {
-		
-			p {
-				font-family: "Times";
-			}
 
-			h3 {
-				color: #888888;
-			}
-		}
-	}
-}
+

@@ -3,20 +3,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .yield_wrapper {
-	.project_tile {
-		background-color: #ffffff;
-		p {
-		}
-
-		img#category {
-			background-color: #888888;
-			float: right;
-		}
-
-	}
-		
-	h1 {
-		@extend .header;
-		color: #ffffff;
-	}
+	
 }

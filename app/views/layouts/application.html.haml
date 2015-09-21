@@ -6,32 +6,6 @@
 		= javascript_include_tag 'application', 'data-turbolinkstrack'		 => true 
 		= csrf_meta_tags 
 
-	.header
-		.header_title
-			%p The portfolio of Samuel Colon
-		.nav_bar_wrapper	
-			%nav
-				%ul
-					%li= link_to "Projects", projects_path
-					%li= "Resume"
-					%li= "Contact"
-
-		.control_panel
-			-if user_signed_in?
-				= link_to "Add new project", new_project_path
-		
 	%body
-		%p.notice= notice
-		%p.alert= alert
-		
 		.yield_wrapper		
 			= yield
-
-	%footer
-		.footer_wrapper
-			.footer			
-				%p
-					copyrighted 2015, samuel colon 
-					%br/
-					about me
-					privacy policy  
