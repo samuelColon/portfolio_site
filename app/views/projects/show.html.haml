@@ -1,9 +1,18 @@
+%nav.cf
+	%ul
+		%li
+			%a#home{:href => "#"} Home
+		%li
+			%a#contact{:href => "#"} Contact
 
-= image_tag @project.image.url(:large)
-
-%h1= @project.name
-%h3= @project.category
-%p= @project.description
+%body#show
+	.project_wrapper#show
+		.project
+			.project_header	
+				%h1= @project.name
+				%h3= @project.category
+			= image_tag @project.image.url(:large)
+			%p= @project.description
 
 - if user_signed_in?
 	= link_to "Edit", edit_project_path(@project)
