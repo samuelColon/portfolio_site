@@ -75,7 +75,42 @@
   	    }
   	  }
     }
-  }
 
+    .bio_wrapper{
+      align: center;
+      .content {
+        width: 50%;
+        margin: auto;
+        text-align: center;
 
+        .content_header{
 
+        }
+        h1{
+
+        }
+        h3{
+
+        }
+      }
+    }
+
+    .contact_wrapper{
+      align:center;
+      .content {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+
+        .content_header{
+
+        }
+        h1{
+
+        }
+        h3{
+
+        }
+      }
+    }
+}
