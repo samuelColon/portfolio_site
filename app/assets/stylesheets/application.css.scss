@@ -1,4 +1,33 @@
+nav {
+	margin-bottom: 2rem;
+	ul {
+		list-style: none;
+		
+		li{
+			float: left;
+			margin-left: .5rem;
+			a{
+				text-decoration: none;
+				color: #cccccc;
+			}
+			&:hover{
+				a{
+					color: darken(#cccccc, 40%);
+				}
+			}
+		}
+	}
+}
 body {
+}
+
+.cf:before, .cf:after{
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	display: both;
 }
 
 @import 'normalize.scss';
