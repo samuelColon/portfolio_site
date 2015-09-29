@@ -17,6 +17,8 @@
     .project
       .project_header
         %p#name  Featured Project
-        %img{:src => "assets/project_image.jpg"}
+        %h1#projectName= @project.name
+        / %img{:src => "assets/project_image.jpg"}
+        %img= link_to (image_tag @project.image.url(:thumb)), @project
       .project_description
-        %p  Post-ironic flexitarian Shoreditch, kale chips cliche butcher locavore shabby chic ennui Tumblr messenger bag plaid salvia. Fap 90's health goth hella High Life listicle, Intelligentsia gluten-free farm-to-table aesthetic try-hard. Health goth ethical photo booth taxidermy ennui. Helvetica four loko wayfarers occupy kogi synth, meh drinking vinegar.
+        %p=  @project.description
